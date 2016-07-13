@@ -138,7 +138,8 @@ public class GameMode implements ActionListener, MouseListener {
 					if (card[i].getNumber() == card[j].getNumber()
 							&& card[i].getVariety()
 									.equals(card[j].getVariety())) {
-						continue;
+						i--;
+						break;
 					}
 				}
 			}
