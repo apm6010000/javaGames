@@ -13,17 +13,17 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.sf.minesweeper.bean.Own;
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.tools.Tools;
 
 public class About extends JDialog {
 	private JLabel labx, laby, labmine;
 	private JTextField jTextField1, jTextField2, jTextField3;
 	private JButton butyes, butno;
-	SartFrame sartFrame;
+	StartFrame startFrame;
 
-	public About(SartFrame sartFrame) {
-		this.sartFrame = sartFrame;
+	public About(StartFrame startFrame) {
+		this.startFrame = startFrame;
 		this.setTitle("");
 		this.setLocationRelativeTo(null);
 		this.setModal(true);
@@ -72,7 +72,7 @@ public class About extends JDialog {
 							if (Tools.totalMine >= 10
 									&& Tools.totalMine < Tools.totalx
 											* Tools.totaly * 4 / 5) {
-								sartFrame.restart();
+								startFrame.restart();
 								About.this.dispose();
 							} else {
 								JOptionPane.showMessageDialog(null,

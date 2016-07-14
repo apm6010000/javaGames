@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.tools.Tools;
 
 public class MineState extends JPanel {
@@ -23,10 +23,10 @@ public class MineState extends JPanel {
 	private JLabel totalBobmG, totalBobmS, totalBobmB;
 
 	Box b;
-	SartFrame sartFrame;
+	StartFrame startFrame;
 
-	public MineState(SartFrame sartFrame) {
-		this.sartFrame = sartFrame;
+	public MineState(StartFrame startFrame) {
+		this.startFrame = startFrame;
 
 		this.setLayout(new BorderLayout());
 
@@ -51,7 +51,7 @@ public class MineState extends JPanel {
 
 			public void mouseReleased(MouseEvent arg0) {
 				newGame.setIcon(Tools.iiface0);
-				MineState.this.sartFrame.restart();
+				MineState.this.startFrame.restart();
 			}
 		});
 		newGame.setIcon(Tools.iiface0);

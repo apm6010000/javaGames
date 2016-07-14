@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.sf.minesweeper.panel.MineState" x="416" y="537">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="startFrame" kind="Simple">
+            <Point x="476" y="345"/>
+        </Association>
+    </Class>
+    <Class name="com.sf.minesweeper.frame.StartFrame" x="480" y="241">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.panel.MineField"
+            endpointName="mineField" kind="Simple"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.timer.Timers"
+            endpointName="timers" kind="Simple"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.panel.MineState"
+            endpointName="mineState" kind="Simple"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.menu.MineMenu"
+            endpointName="mineMenu" kind="Simple">
+            <Point x="758" y="377"/>
+        </Association>
+    </Class>
+    <Class name="com.sf.minesweeper.dialog.Win" x="534" y="7">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="startFrame" kind="Simple"/>
+    </Class>
+    <Class name="com.sf.minesweeper.panel.MineField" x="77" y="280">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.listener.MouseListener"
+            endpointName="mouseListener" kind="Simple"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="startFrame" kind="Simple">
+            <Point x="229" y="343"/>
+        </Association>
+        <Association
+            destinationClassName="com.sf.minesweeper.bean.MineLabel"
+            endpointName="mineLabel[][]" kind="Simple"/>
+        <Communication destinationClassName="com.sf.minesweeper.bean.MineLabel"/>
+    </Class>
+    <Class name="com.sf.minesweeper.bean.MineLabel" x="88" y="11">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.sf.minesweeper.menu.MineMenu" x="914" y="496">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="startFrame" kind="Simple"/>
+    </Class>
+    <Class name="com.sf.minesweeper.timer.Timers" x="755" y="581">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.panel.MineState"
+            endpointName="mineState" kind="Simple"/>
+    </Class>
+    <Class name="com.sf.minesweeper.dialog.About" x="334" y="9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="startFrame" kind="Simple"/>
+    </Class>
+    <Class name="com.sf.minesweeper.listener.MineMenuListener" x="791" y="15">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="startFrame" kind="Simple"/>
+        <Communication destinationClassName="com.sf.minesweeper.frame.StartFrame"/>
+    </Class>
+    <Class name="com.sf.minesweeper.listener.MouseListener" x="33" y="423">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="sartframe" kind="Simple">
+            <Point x="236" y="472"/>
+        </Association>
+        <Communication destinationClassName="com.sf.minesweeper.panel.MineState"/>
+        <Communication destinationClassName="com.sf.minesweeper.frame.StartFrame"/>
+        <Communication destinationClassName="com.sf.minesweeper.panel.MineField"/>
+        <Communication destinationClassName="com.sf.minesweeper.bean.MineLabel"/>
+    </Class>
+    <Class name="com.sf.minesweeper.dialog.ShowWin" x="863" y="144">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.sf.minesweeper.frame.StartFrame"
+            endpointName="sartsrame" kind="Simple"/>
+    </Class>
+</ClassDiagram>

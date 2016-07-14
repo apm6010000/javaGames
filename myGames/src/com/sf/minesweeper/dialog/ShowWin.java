@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.sf.minesweeper.bean.Own;
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.tools.Tools;
 
 public class ShowWin extends JDialog {
@@ -32,10 +32,10 @@ public class ShowWin extends JDialog {
 	private JLabel name3;
 	private JButton jbutton1;
 	private JButton jbutton2;
-	private SartFrame sartsrame;
+	private StartFrame sartsrame;
 	private JPanel jpanel;
 
-	public ShowWin(SartFrame sartsrame) {
+	public ShowWin(StartFrame sartsrame) {
 		this.sartsrame = sartsrame;
 		this.setTitle("É¨À×ÅÅÐÐ°ñ");
 		this.setVisible(true);

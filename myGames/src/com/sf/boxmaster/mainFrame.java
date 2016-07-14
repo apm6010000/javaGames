@@ -25,18 +25,17 @@ class mainFrame extends JFrame implements ActionListener, ItemListener {
 	mainpanel panel;
 	Sound sound;
 	JComboBox jc = new JComboBox();
-	MenuItem renew = new MenuItem("    重新开始");
-	MenuItem back = new MenuItem("    悔一步");
-	MenuItem last = new MenuItem("    上一关");
-	MenuItem next = new MenuItem("    下一关");
-	MenuItem choose = new MenuItem("    选关");
-	MenuItem exit = new MenuItem("    退出");
-	MenuItem qin = new MenuItem("    琴萧合奏");
-	MenuItem po = new MenuItem("    泡泡堂");
-	MenuItem guang = new MenuItem("    灌篮高手");
-	MenuItem nor = new MenuItem("    默认");
-	MenuItem eye = new MenuItem("    eyes on me");
-	MenuItem about = new MenuItem("    关于推箱子...");
+	MenuItem renew = new MenuItem("重新开始");
+	MenuItem back = new MenuItem("悔一步");
+	MenuItem last = new MenuItem("上一关");
+	MenuItem next = new MenuItem("下一关");
+	MenuItem choose = new MenuItem("选关");
+	MenuItem exit = new MenuItem("退出");
+	MenuItem qin = new MenuItem("琴萧合奏");
+	MenuItem po = new MenuItem("泡泡堂");
+	MenuItem guang = new MenuItem("灌篮高手");
+	MenuItem nor = new MenuItem("默认");
+	MenuItem eye = new MenuItem("eyes on me");
 
 	mainFrame() {
 		super("推箱子v2.0");
@@ -48,7 +47,7 @@ class mainFrame extends JFrame implements ActionListener, ItemListener {
 		Container cont = getContentPane();
 		cont.setLayout(null);
 		cont.setBackground(Color.black);
-		Menu choice = new Menu("    选项");
+		Menu choice = new Menu("选项");
 		choice.add(renew);
 		choice.add(last);
 		choice.add(next);
@@ -62,7 +61,7 @@ class mainFrame extends JFrame implements ActionListener, ItemListener {
 		choose.addActionListener(this);
 		exit.addActionListener(this);
 		back.addActionListener(this);
-		Menu setmuc = new Menu("    设置音乐");
+		Menu setmuc = new Menu("设置音乐");
 		setmuc.add(nor);
 		setmuc.add(qin);
 		setmuc.add(po);
@@ -73,17 +72,13 @@ class mainFrame extends JFrame implements ActionListener, ItemListener {
 		po.addActionListener(this);
 		guang.addActionListener(this);
 		eye.addActionListener(this);
-		Menu help = new Menu("    帮助");
-		help.add(about);
-		about.addActionListener(this);
 		MenuBar bar = new MenuBar();
 		bar.add(choice);
 		bar.add(setmuc);
-		bar.add(help);
 		setMenuBar(bar);
 
 		nor.setEnabled(false);
-		lb = new JLabel("JAVA推箱子v2.0版！！！", SwingConstants.CENTER);
+		lb = new JLabel("快把箱子移到指定的位置吧", SwingConstants.CENTER);
 		lb2 = new JLabel("更换音乐", SwingConstants.CENTER);
 		add(lb);
 		add(lb2);
@@ -169,11 +164,7 @@ class mainFrame extends JFrame implements ActionListener, ItemListener {
 			panel.remove();
 		} else if (e.getSource() == exit)
 			System.exit(0);
-		else if (e.getSource() == about) {
-			JOptionPane
-					.showMessageDialog(this,
-							"JAVA推箱子v2.0版\n开发者：施超\nEmail:   shichaoling1@126.com\nQQ:   450400704");
-		} else if (e.getSource() == btnchoose || e.getSource() == choose) {
+		else if (e.getSource() == btnchoose || e.getSource() == choose) {
 			String lel = JOptionPane
 					.showInputDialog(this, "请输入您要转到的关卡号：(1~50)");
 			panel.level = Integer.parseInt(lel);

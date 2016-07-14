@@ -15,10 +15,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
 import com.sf.boxmaster.*;
 import com.sf.cardgame.StartCardGame;
+import com.sf.minesweeper.frame.*;
 
 public class Start extends JFrame {
 
@@ -27,7 +29,6 @@ public class Start extends JFrame {
 	 */
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		// new com.sf.boxmaster.myboxmaster();
 		new Start();
 
 	}
@@ -86,8 +87,9 @@ public class Start extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO 自动生成的方法存根
 				setVisible(false);
-				new com.sf.minesweeper.frame.SartFrame();
+				new StartFrame();
 			}
 		});
+		SwingUtilities.updateComponentTreeUI(this);
 	}
 }

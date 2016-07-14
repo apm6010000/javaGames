@@ -10,19 +10,19 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 import com.sf.minesweeper.bean.MineLabel;
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.listener.MouseListener;
 import com.sf.minesweeper.tools.Tools;
 
 public class MineField extends JPanel {
 
-	SartFrame sartFrame;
+	StartFrame startFrame;
 	MouseListener mouseListener;
 	private MineLabel mineLabel[][];
 
-	public MineField(SartFrame sartFrame) {
+	public MineField(StartFrame startFrame) {
 
-		this.sartFrame = sartFrame;
+		this.startFrame = startFrame;
 		this.setLayout(new BorderLayout());
 
 		mineLabel = new MineLabel[Tools.totalx][Tools.totaly];
@@ -30,7 +30,7 @@ public class MineField extends JPanel {
 		JPanel jPanel2 = new JPanel();
 		jPanel2.setLayout(new GridLayout(Tools.totalx, Tools.totaly));
 
-		mouseListener = new MouseListener(sartFrame);
+		mouseListener = new MouseListener(startFrame);
 
 		for (int i = 0; i < Tools.totalx; i++) {
 			for (int j = 0; j < Tools.totaly; j++) {
@@ -60,7 +60,6 @@ public class MineField extends JPanel {
 
 			int x = (int) (Math.random() * Tools.totalx);
 			int y = (int) (Math.random() * Tools.totaly);
-			// System.out.println(y);
 
 			if (x == rowx && y == coly) {
 				i--;
@@ -78,82 +77,6 @@ public class MineField extends JPanel {
 			for (int j = 0; j < Tools.totaly; j++) {
 				int count = 0;
 				if (!mineLabel[i][j].isMine()) {
-
-					// 计算雷块周围八个方向雷数:方法1
-
-					// /**
-					// * 上
-					// */
-					// if (i > 0) {
-					// if (mineLabel[i - 1][j].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 左上
-					// */
-					// if (i > 0 && j>0) {
-					// if (mineLabel[i - 1][j-1].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 右上
-					// */
-					// if (i > 0&&j+1< Tools.totaly) {
-					// if (mineLabel[i - 1][j+1].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 左
-					// */
-					// if (j>0) {
-					// if (mineLabel[i][j-1].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 右
-					// */
-					// if (j+1< Tools.totaly) {
-					// if (mineLabel[i][j+1].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 左下
-					// */
-					// if (i+1< Tools.totalx&&j>0) {
-					// if (mineLabel[i + 1][j-1].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 下
-					// */
-					// if (i+1< Tools.totalx) {
-					// if (mineLabel[i + 1][j].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-					// /**
-					// * 右下
-					// */
-					// if (i+1< Tools.totalx && j+1< Tools.totaly) {
-					// if (mineLabel[i + 1][j+1].isMine()) {
-					// count++;
-					// }
-					// }
-					//
-
 					for (int x = Math.max(i - 1, 0); x <= Math.min(i + 1,
 							Tools.totalx - 1); x++) {
 						for (int y = Math.max(j - 1, 0); y <= Math.min(j + 1,

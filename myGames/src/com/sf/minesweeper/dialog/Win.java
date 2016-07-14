@@ -14,18 +14,18 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.sf.minesweeper.bean.Own;
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.tools.Tools;
 
 public class Win extends JDialog {
-	SartFrame sartFrame;
+	StartFrame startFrame;
 	private JTextField text;
 	TreeSet<Own> LOWER = new TreeSet<Own>();
 	TreeSet<Own> MIDDLE = new TreeSet<Own>();
 	TreeSet<Own> HEIGHT = new TreeSet<Own>();
 
-	public Win(SartFrame sartFrame) {
-		this.sartFrame = sartFrame;
+	public Win(StartFrame startFrame) {
+		this.startFrame = startFrame;
 		this.setTitle("ÌáÊ¾¿ò");
 		this.setLocationRelativeTo(null);
 		this.setSize(200, 150);

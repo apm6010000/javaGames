@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 import com.sf.minesweeper.bean.MineLabel;
 import com.sf.minesweeper.dialog.Win;
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.panel.MineField;
 import com.sf.minesweeper.tools.Tools;
 
@@ -20,12 +20,12 @@ public class MouseListener extends MouseAdapter {
 	private int expendedCount; // 雷块展开的数量
 	// MineField mineField;
 
-	SartFrame sartframe;
+	StartFrame sartframe;
 	boolean isDouble;
 	int temp = Tools.totalMine;// 临时雷数
 	boolean isStart;// 游戏是否开始
 
-	public MouseListener(SartFrame sartframe) {
+	public MouseListener(StartFrame sartframe) {
 		this.sartframe = sartframe;
 	}
 

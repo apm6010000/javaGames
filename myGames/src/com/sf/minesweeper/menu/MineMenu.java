@@ -9,7 +9,7 @@ import javax.swing.JMenuItem;
 
 import com.sf.minesweeper.bean.MineLabel;
 import com.sf.minesweeper.dialog.ShowWin;
-import com.sf.minesweeper.frame.SartFrame;
+import com.sf.minesweeper.frame.StartFrame;
 import com.sf.minesweeper.listener.MineMenuListener;
 import com.sf.minesweeper.tools.Tools;
 
@@ -21,10 +21,10 @@ public class MineMenu extends JMenuBar {
 	private static final long serialVersionUID = -5997735339754706915L;
 
 	// SartFrame sartFrame;
-	public MineMenu(SartFrame sartFrame) {
-		this.sartFrame = sartFrame;
+	public MineMenu(StartFrame startFrame) {
+		this.startFrame = startFrame;
 
-		MineMenuListener listener = new MineMenuListener(sartFrame);
+		MineMenuListener listener = new MineMenuListener(startFrame);
 
 		JMenu fileMenu = new JMenu("游戏(G)");
 		fileMenu.setMnemonic('G');
@@ -79,20 +79,15 @@ public class MineMenu extends JMenuBar {
 		JMenu aboutMenu = new JMenu("帮助(H)");
 		aboutMenu.setMnemonic('H');
 
-		JMenu aboutItem = new JMenu("版权信息(A)");
-		aboutMenu.add(aboutItem);
-		JMenuItem about2 = new JMenuItem("版本号为2012.07.23.13.04，所有权归洪清涯所有");
-		aboutItem.add(about2);
-
-		JMenuItem weiGuaItem = new JMenuItem("外挂(W)");
+		JMenuItem weiGuaItem = new JMenuItem("显示地雷(W)");
 		aboutMenu.add(weiGuaItem);
 
 		weiGuaItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				if (MineMenu.this.sartFrame.isStart()) {
+				if (MineMenu.this.startFrame.isStart()) {
 					// 判断每一个雷块是否是雷
-					for (MineLabel[] mineLabel : MineMenu.this.sartFrame
+					for (MineLabel[] mineLabel : MineMenu.this.startFrame
 							.getMineField().getMineLabel()) {
 						for (MineLabel m : mineLabel) {
 							if (m.isMine()) {
@@ -111,10 +106,10 @@ public class MineMenu extends JMenuBar {
 
 	}
 
-	private SartFrame sartFrame;
+	private StartFrame startFrame;
 
-	public SartFrame getSartFrame() {
-		return sartFrame;
+	public StartFrame getSartFrame() {
+		return startFrame;
 	}
 
 }
